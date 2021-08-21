@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/site.css">
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 home-bg">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
@@ -42,13 +42,53 @@
     </nav>
 
     <main class="flex-shrink-0">
-        <div class="container">
+        <div class="container h-100 minHeight">
+            <div class="row h-100">
+                <!-- Left Column -->
+                <div class="col-7">
+                    <div class="bg-dark text-light h-100 p-2 alphaTest">
+                        <h1>Column One</h1>
+                        <p>This layout features a 2 column layout, and in the right column, it has two Divs that will be stacked up on one another.</p>
+                        <p>We're using the FlexBox flex-column justify-content-evenly class to stack the Divs, but on smaller devices, like the Iphone X or smaller, the layout is not ideal, and other solutions might look better.</p>
+                        <p>Still our purpose on this exercise was to experiment with what FlexBox can do, and this layout would be suited more for larger screens, though it is readable <em>(and ugly)</em>  on smaller displays.</p>
+                        <p class="text-muted">Cum quam error est officia repudiandae sed iure commodi. Qui accusantium magni qui quae voluptatem qui asperiores provident. Qui quisquam minima et sint voluptas At totam tenetur aut voluptatem quae eum dolores iure qui error explicabo. Sed quis officiis et veniam reiciendis est adipisci quaerat. </p>
+                        <p class="text-muted">Est excepturi veniam est dignissimos quisquam id ratione illum vel nihil illo id aliquam nihil aut quisquam ullam aut porro quae. Sit quidem molestiae non quibusdam esse aut fugiat assumenda in nihil odio qui cumque voluptate sed fugit dicta. Qui perspiciatis aliquam id quos asperiores ea numquam accusamus eos iste corrupti et fugiat enim.</p>
+                        <p class="text-muted">Qui aperiam cupiditate sit enim odio et error repudiandae id modi ipsa qui facere assumenda et laudantium libero. Et accusamus veniam id voluptatum consequatur non iure velit. Est repudiandae molestiae hic harum inventore id dolorum distinctio et eaque optio At reiciendis expedita id beatae quia! Ab minus quia cum aspernatur optio est minus consectetur qui rerum necessitatibus qui placeat fuga.</p>
+                    </div>
+                </div>
+                <!-- read up on d-flex flex-column -->
+                <div class="col-5 h-100 d-flex flex-column justify-content-evenly alphaTest">
+                    <!-- Right Top Column -->
+                    <div class="bg-dark text-light h-50 p-2 overflow-auto">
+                        <h1>Column Two: Div 1</h1>
+                        <p>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Basic Concepts of FlexBox</a>
+                        </p>
+                        <p><em>d-flex flex-column justify-content-evenly</em> allows these two columns to stack on each other.</p>
+                        <p>Use <em>overflow-auto</em> to add a scrollbar if content goes past this area. Using this layout should actually have limited content, a short description or blurb, etc</p>
+                        <p>For now we will leave the ugly scrollbar in, just to remind ourselves that we can use it if we need it.</p>
+                        <p class="text-muted">Qui aperiam cupiditate sit enim odio et error repudiandae id modi ipsa qui facere assumenda et laudantium libero. Et accusamus veniam id voluptatum consequatur non iure velit. Est repudiandae molestiae hic harum inventore id dolorum distinctio et eaque optio At reiciendis expedita id beatae quia! Ab minus quia cum aspernatur optio est minus consectetur qui rerum necessitatibus qui placeat fuga.</p>
+                    </div>
+                    <!-- Note that h-50/h-50 splits each column height to 50% -->
+                    <!-- Right Bottom Column  -->
+                    <div class="bg-dark text-light h-50 mt-2 p-2 overflow-hidden">
+                        <h1>Column Two: Div 2</h1>
+                        <p>Use <em>overflow-hidden</em> to stop content from overflowing an element. Overflow is <em>NOT</em> responsive.</p>
+                        <p class="text-muted">Est excepturi veniam est dignissimos quisquam id ratione illum vel nihil illo id aliquam nihil aut quisquam ullam aut porro quae. Sit quidem molestiae non quibusdam esse aut fugiat assumenda in nihil odio qui cumque voluptate sed fugit dicta. Qui perspiciatis aliquam id quos asperiores ea numquam accusamus eos iste corrupti et fugiat enim.</p>
+                    </div>
+                    <!-- Course use mt-2 to create space between columns, but it pushes content down past page, unless you use d-flex -->
+                    <div class="bg-dark text-light border-top p-2 mt-2">
+                        <button class="btn btn-light" type="button">Read More</button>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </main>
     <footer class="footer mt-auto py-3 bg-dark sticky-footer">
         <div class="container-fluid text-center">
-            <span class="text-muted">&copy; Bootstrap Grids | 2004-2021 DarkTown Studios</span>
+            <span class="text-muted">An Exercise In Using Bootstrap Grid Layouts | &copy; 2004-2021 DarkTown
+                Studios</span>
         </div>
     </footer>
     <!-- Bootstrap JS -->

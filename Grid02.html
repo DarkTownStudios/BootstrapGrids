@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/site.css">
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 home-bg">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
@@ -28,7 +28,8 @@
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="/Grid01.html" class="nav-link">Grid 1</a></li>
-                    <li class="nav-item"><a href="/Grid02.html" class="nav-link active" aria-current="page">Grid 2</a></li>
+                    <li class="nav-item"><a href="/Grid02.html" class="nav-link active" aria-current="page">Grid 2</a>
+                    </li>
                     <li class="nav-item"><a href="/Grid03.html" class="nav-link">Grid 3</a></li>
                     <li class="nav-item"><a href="/Grid04.html" class="nav-link">Grid 4</a></li>
                     <li class="nav-item"><a href="/Grid05.html" class="nav-link">Grid 5</a></li>
@@ -42,13 +43,37 @@
     </nav>
 
     <main class="flex-shrink-0">
-        <div class="container">
-
+        <!-- Note: container is using a custom class in site.css -->
+        <div class="container h-100 minHeight">
+            <!-- Set the gutters in the row, gx for horizontal, gy for vertical stacking -->
+            <div class="row h-100 gx-2 gx-sm-3">
+                <!-- Design with smallest screen first, then move up -->
+                <div class="col-4 col-md-3">
+                    <!-- On smallest mobile, Sidebar will have less padding and less gutter to compensate. p-2, then p-sm-3 -->
+                    <div class="bg-secondary text-light h-100 p-2 p-sm-3">
+                        <h1>Side Bar</h1>
+                        <!-- I would like to resize font size on breakpoints (font big on smallest) -->
+                        <p>Normally we might want to make this collapse on a smaller mobile screen, but this grid would
+                            be more for a larger site, which would put nav elements inside of it.</p>
+                    </div>
+                </div>
+                <!-- Default is col-8, I only change width on md and larger screens -->
+                <div class="col-8 col-md-9">
+                    <div class="bg-dark text-light h-100 p-2 p-sm-3">
+                        <h1>Main Content</h1>
+                            <p>Containers provide a means to center and horizontally pad your site's contents.</p>
+                            <p>Rows are wrappers for columns. Content is wrapped in columns.</p>
+                            <p>Define height of content area using h-100, padding with p-* and gxy-*</p>
+                            <p>For more control, wrap the content in it's own div.wrapper</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="footer mt-auto py-3 bg-dark sticky-footer">
         <div class="container-fluid text-center">
-            <span class="text-muted">&copy; Bootstrap Grids | 2004-2021 DarkTown Studios</span>
+            <span class="text-muted">An Exercise In Using Bootstrap Grid Layouts | &copy; 2004-2021 DarkTown
+                Studios</span>
         </div>
     </footer>
     <!-- Bootstrap JS -->
