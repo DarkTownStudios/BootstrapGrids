@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/site.css">
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 bg-main">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
@@ -31,7 +31,8 @@
                     <li class="nav-item"><a href="/Grid02.html" class="nav-link">Grid 2</a></li>
                     <li class="nav-item"><a href="/Grid03.html" class="nav-link">Grid 3</a></li>
                     <li class="nav-item"><a href="/Grid04.html" class="nav-link">Grid 4</a></li>
-                    <li class="nav-item"><a href="/Grid05.html" class="nav-link active" aria-current="page">Grid 5</a></li>
+                    <li class="nav-item"><a href="/Grid05.html" class="nav-link active" aria-current="page">Grid 5</a>
+                    </li>
                     <li class="nav-item"><a href="/Grid06.html" class="nav-link">Grid 6</a></li>
                     <li class="nav-item"><a href="/Grid07.html" class="nav-link">Grid 7</a></li>
                     <li class="nav-item"><a href="/Grid08.html" class="nav-link">Grid 8</a></li>
@@ -42,7 +43,75 @@
     </nav>
 
     <main class="flex-shrink-0">
-        <div class="container">
+        <div class="container h-100 minHeight">
+            <!-- Use row-cols to stack -->
+            <div class="row row-cols-1 rows-cols-md-3 h-100 gy-1">
+                <!-- COLUMN ONE -->
+                <div class="col col-md-3 order-last order-md-first">
+                    <div class="bg-secondary text-light h-100 p-2">
+                        <h1>Grid 5: Column 1</h1>
+                        <p>To set me to appear on the bottom of a stack, set my <em>order-last</em> instead.</p>
+                        <code>
+                            &lt;div class="col col-md-3 order-last"&gt;
+                        </code>
+                        <p>Of course, I only want this to go in this order, when elements are stacked on smaller screens
+                            so we will have to use breakpoints instead.</p>
+                        <code>
+                            &lt;div class="col col-md-3 order-last order-md-first"&gt;
+                        </code>
+                        <p>Now I will appear on the <b>bottom</b> when stacked, but on larger screens I will be the
+                            first column displayed</p>
+                    </div>
+                </div>
+                <!-- COLUMN 2 -->
+                <div class="col col-md-6">
+                    <div class="bg-dark text-light h-100 p-2 alphaTest">
+                        <h1>Grid 5: Column 2</h1>
+                        <h5>The Order Of Things</h5>
+                        <p>
+                            Unlike Grid 4, which simply used <em>col</em> so that all columns were the same, this time
+                            we will define the actual column sizes in the &lt;col&gt; tag using <em>col-md-*</em>
+                        </p>
+                        <p>We still use <em>row-cols-1</em> as default, to stack them on smaller screens, but will then
+                            want them to be in 3 columns on larger screens using <em>row-cols-md-3</em> </p>
+                        <p>When stacking the elements, don't forget to add gutters, eg. <em>gy-1</em></p>
+                        <h5>Ordering Columns</h5>
+                        <p>We use Bootstrap 5 <em>order-*</em> to change the order of how the columns will appear.</p>
+                        <p>So to set Column 1 to be the last in the stack order, set it's order to 3.</p>
+                        <code>
+                            &lt;div class="col col-md-3 order-3"&gt;
+                        </code>
+                        <p>Set Column 2 to order-2</p>
+                        <code>
+                            &lt;div class="col col-md-3 order-2"&gt;
+                        </code>
+                        <p>And set Column 3 to order-1</p>
+                        <code>
+                            &lt;div class="col col-md-3 order-1"&gt;
+                        </code>
+                        <p>Now on smaller screens, Column 3 should be on top.</p>
+                        <p>On this layout, I used breakpoints and <em>order-first</em> and <em>order-last.</em></p>
+                    </div>
+                </div>
+                <!-- COLUMN THREE -->
+                <div class="col col-md-3 order-first order-md-last">
+                    <div class="bg-secondary text-light h-100 p-2">
+                        <h1>Grid 5: Column 3</h1>
+                        
+                        <p>To set me to appear on the bottom of a stack, set my <em>order-first</em> instead.</p>
+                        <code>
+                            &lt;div class="col col-md-3 order-first"&gt;
+                        </code>
+                        <p>Of course, I only want this to go in this order, when elements are stacked on smaller screens
+                            so we will have to use breakpoints instead.</p>
+                        <code>
+                            &lt;div class="col col-md-3 order-first order-md-last"&gt;
+                        </code>
+                        <p>Now I will appear on the <b>top</b>, when stacked, but on larger screens I will be the first
+                            column displayed</p>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </main>

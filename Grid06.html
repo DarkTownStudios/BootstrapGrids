@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/site.css">
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 bg-main">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
@@ -32,20 +32,43 @@
                     <li class="nav-item"><a href="/Grid03.html" class="nav-link">Grid 3</a></li>
                     <li class="nav-item"><a href="/Grid04.html" class="nav-link">Grid 4</a></li>
                     <li class="nav-item"><a href="/Grid05.html" class="nav-link">Grid 5</a></li>
-                    <li class="nav-item"><a href="/Grid06.html" class="nav-link active" aria-current="page">Grid 6</a></li>
+                    <li class="nav-item"><a href="/Grid06.html" class="nav-link active" aria-current="page">Grid 6</a>
+                    </li>
                     <li class="nav-item"><a href="/Grid07.html" class="nav-link">Grid 7</a></li>
                     <li class="nav-item"><a href="/Grid08.html" class="nav-link">Grid 8</a></li>
                     <li class="nav-item"><a href="/Grid09.html" class="nav-link">Grid 9</a></li>
                 </ul>
             </div>
+
         </div>
     </nav>
 
     <main class="flex-shrink-0">
-        <div class="container">
-
-        </div>
+        <div class="container h-100 minHeight">
+            <div class="row h-100 gy-2 row-cols-1 row-cols-md-2">
+                <div class="col col-md-12">
+                    <div class="bg-secondary h-100 text-light p-3">
+                        <h1>Grid 6</h1>
+                        <h5>Stacking Elements In Order</h5>
+                        <p>order-first, order-last, order-{breakpoint}-#</p>
+                    </div>
+                </div>
+                <div class="col col-md-6 order-last order-md-0">
+                    <div class="bg-dark h-100 text-light p-3">
+                        <h1>Column 2</h1>
+                        <p>This column will appear in order in larger screens, but on smaller mobile devices, will appear as the last element when the columns stack.</p>
+                    </div>
+                </div>
+                <div class="col cold-md-6">
+                        <div class="bg-secondary h-100 text-light p-3">
+                            <h1>Column 3</h1>
+                            <p>I will become the second element in the stack on smaller screens.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </main>
+
     <footer class="footer mt-auto py-3 bg-dark sticky-footer">
         <div class="container-fluid text-center">
             <span class="text-muted">An Exercise In Using Bootstrap Grid Layouts | &copy; 2004-2021 DarkTown

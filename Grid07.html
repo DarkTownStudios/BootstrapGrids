@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/site.css">
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 bg-main">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
@@ -33,7 +33,8 @@
                     <li class="nav-item"><a href="/Grid04.html" class="nav-link">Grid 4</a></li>
                     <li class="nav-item"><a href="/Grid05.html" class="nav-link">Grid 5</a></li>
                     <li class="nav-item"><a href="/Grid06.html" class="nav-link">Grid 6</a></li>
-                    <li class="nav-item"><a href="/Grid07.html" class="nav-link active" aria-current="page">Grid 7</a></li>
+                    <li class="nav-item"><a href="/Grid07.html" class="nav-link active" aria-current="page">Grid 7</a>
+                    </li>
                     <li class="nav-item"><a href="/Grid08.html" class="nav-link">Grid 8</a></li>
                     <li class="nav-item"><a href="/Grid09.html" class="nav-link">Grid 9</a></li>
                 </ul>
@@ -42,7 +43,58 @@
     </nav>
 
     <main class="flex-shrink-0">
-        <div class="container">
+        <!-- Using container-lg so that 100% width only applies to large screens and up -->
+        <div class="container-lg h-100 minHeight">
+            <div class="row h-100 gy-3 row-cols-1 row-cols-md-3">
+                <div class="col col-md-12">
+                    <div class="bg-secondary h-100 text-light p-3">
+                        <h1>Grid 7</h1>
+                        <h5>Using  Container Breakpoints To Set The Display Width</h5>
+                        <p><a href="https://getbootstrap.com/docs/5.1/layout/containers/"> BootStrap 5.1 Containers</a>
+                        </p>
+                        <ul style="line-height: 1.75em;">
+                            <li><em>.container</em>, which sets a max-width at each responsive breakpoint</li>
+                                <ul>
+                                    <li>Always puts a gutter on each breakpoint, other than the smallest of screens.</li>
+                                </ul>
+                            <li><em>.container-fluid</em>, which is width: 100% at all breakpoints</li>
+                            <li><em>.container-{breakpoint}</em>, which is width: 100% <em>until</em> the specified
+                                breakpoint</li>
+                                <ul>
+                                    <li><em>.container-lg</em> When this breakpoint is met, apply a gutter, and no longer apply 100% width to the container.</li>
+                                </ul>
+                        </ul>
+                        <h5>Only Apply 100% Width On Larger Screens</h5>
+                        <p>To make this page stretch all the columns across the width, we changed our container type:
+                            <hr>
+                            <code>
+                                &lt;div class="<b>container-lg</b> h-100 minHeight"&gt;&lt;/div&gt; 
+                            </code>
+                            <hr>
+                        <p>There was no gap on top, so we had to add a style in our site.css</p>
+                        <hr>
+                        <code>
+                            main&gt;.container-fluid,<b>.container-lg</b> { padding-top: 60px; }
+                        </code>
+                        <hr>
+
+                    </div>
+                </div>
+                <div class="col col-md-6 order-last order-md-0">
+                    <div class="bg-dark h-100 text-light p-3 alphaTest">
+                        <h1>Column 2</h1>
+                        <p>This column will appear as the last element when the columns stack.</p>
+                        <code>
+                            &lt;div class="col col-md-6 <b>order-last</b> order-md-0"&gt;
+                        </code>
+                    </div>
+                </div>
+                <div class="col col-md-6">
+                    <div class="bg-dark h-100 text-light p-3 alphaTest">
+                        <h1>Column 3</h1>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </main>

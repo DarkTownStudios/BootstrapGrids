@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/site.css">
 </head>
 
-<body class="d-flex flex-column h-100 home-bg">
+<body class="d-flex flex-column h-100 bg-main">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
@@ -43,11 +43,15 @@
 
     <main class="flex-shrink-0">
         <div class="container h-100 minHeight">
+            <ul class="nav nav-pills mb-1">
+                <li class="nav-item"><a href="Grid03.html" class="nav-link active" aria-current="page">Grid 3</a></li>
+                <li class="nav-item"><a href="Grid03b.html" class="nav-link">Grid 3b</a></li>
+            </ul>
             <div class="row h-100">
                 <!-- Left Column -->
                 <div class="col-7">
                     <div class="bg-dark text-light h-100 p-2 alphaTest">
-                        <h1>Column One</h1>
+                        <h1>Grid 3: 2-Column</h1>
                         <p>This layout features a 2 column layout, and in the right column, it has two Divs that will be stacked up on one another.</p>
                         <p>We're using the FlexBox flex-column justify-content-evenly class to stack the Divs, but on smaller devices, like the Iphone X or smaller, the layout is not ideal, and other solutions might look better.</p>
                         <p>Still our purpose on this exercise was to experiment with what FlexBox can do, and this layout would be suited more for larger screens, though it is readable <em>(and ugly)</em>  on smaller displays.</p>

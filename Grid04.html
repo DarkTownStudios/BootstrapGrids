@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/site.css">
 </head>
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 bg-main">
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
@@ -42,7 +42,40 @@
     </nav>
 
     <main class="flex-shrink-0">
-        <div class="container">
+        <div class="container h-100 minHeight">
+            <!-- Get these columns to stack on each other using row-cols -* -->
+            <!-- So, by default row-cols-1 will display by default and on small mobile as 1 <div class="row"> -->
+            <!-- On larger screens, row-cols-md-3 will display as 3 columns -->
+            <!-- Don't forget to set your gutters when items stack eg. gy-2 -->
+            <div class="row row-cols-1 row-cols-md-3 h-100 gy-2">
+                <div class="col">
+                    <!-- Style your content wrapper, not the col -->
+                    <div class="bg-secondary text-light h-100 p-2 alphaTest">
+                        <h1>Grid 4</h1>
+                        
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="bg-dark text-light h-100 p-2 alphaTest">
+                        <h1>Column 2</h1>
+                        <h5></h5>
+                        <p>Simple 3 column grid that stacks on smaller screens, using <em>row-cols-#</em> and <em>row-cols-{breakpoint}-#</em></p>
+                        <hr>
+                        <code>
+                            &lt;div class="row row-cols-1 row-cols-md-3 h-100 gy-2"&gt;
+                        </code>
+                        <hr>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="bg-secondary text-light h-100 p-2 alphaTest">
+                        <h1>Column 3</h1>
+                    </div>
+
+                </div>
+            </div>
 
         </div>
     </main>

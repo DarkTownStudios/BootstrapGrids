@@ -12,9 +12,11 @@ a:link{
     color: #F5CA36;
 }
 
-code {
-    font-family: Roboto,Consolas,sans-serif;
-  }
+code,pre {
+    font-family: Consolas,sans-serif;
+    font-size: 1em;
+    color: #F5CA36;
+}
 
 body>main {
     /* margin to account for nav bar */
@@ -25,6 +27,9 @@ body>main {
 main>.container {
     padding: 60px 15px 0;
     margin-bottom: 5rem;
+}
+main>.container-fluid,.container-lg{
+    padding-top: 60px;
 }
 .sticky-nav {
     position: fixed;
@@ -37,7 +42,7 @@ main>.container {
     padding-right: 1em;
 }
 
-.home-bg{ 
+.bg-main{ 
     width: 100%;
     background-image: url(/img/GridBG.jpg); 
     background-repeat: no-repeat;
