@@ -45,73 +45,116 @@
     <!-- Main Container -->
     <main class="flex-shrink-0">
         <div class="container h-100 minHeight">
-            <div class="row">
-                <div class="col">
-                    <div class="text-center">
-                        <h1 class="text-white">Contact Us</h1>
+
+            <h1 class="text-center text-white mb-3">Contact Us</h1>
+
+            <!-- My old school version, lol. No Bootstrap forms used -->
+            <form class="bg-dark alphaTest p-2" action="" method="get">
+                <!-- Don't need to define row cols that is for stacking, which you were doing.-->
+                <div class="row">
+                    <div class="col">
+                        <!-- Don't need all these containing divs, unlike real content I guess -->
+                        <label for="firstname">First Name</label>
+                    </div>
+                    <div class="col">
+                        <label for="firstname">Last Name</label>
+                    </div>                    
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <!-- Capitalize name fields for C# later -->
+                        <!-- Don't forget aria-labels on input elements and required-->
+                        <input type="text" id="firstname" name="FirstName" placeholder="First Name"
+                            aria-label="First Name" required>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="lastname" name="lastname" required placeholder="Last Name">
                     </div>
                 </div>
-            </div>
-            <!-- My form solution first try. No Bootstrap forms used -->
-            <form class="bg-secondary p-2" action="" method="get">
-                <div class="row row-cols-2">
+                <div class="row">
                     <div class="col">
-                        <div><label for="firstname">First Name</label></div>
+                        <label for="email">Email</label>
                     </div>
                     <div class="col">
-                        <div><label for="firstname">Last Name</label></div>
+                        <label for="phone">Phone (optional)</label>
+                    </div>                    
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="email" id="email" size="30" required placeholder="Email">
                     </div>
                     <div class="col">
-                        <div><input type="text" id="firstname" name="firstname" required placeholder="First Name"></div>
-                    </div>
-                    <div class="col">
-                        <div><input type="text" id="lastname" name="lastname" required placeholder="Last Name"></div>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            placeholder="Phone">
                     </div>
                 </div>
-                <div class="row row-cols-2">
+                <div class="row">
+                    <!-- Put label and input in same column when you want to span the entire width -->
                     <div class="col">
-                        <div><label for="email">Email</label></div>
-                    </div>
-                    <div class="col">
-                        <div><label for="phone">Phone (Optional)</label></div>
-                    </div>
-                    <div class="col">
-                        <div><input type="email" id="email" size="30" required placeholder="Email"></div>
-                    </div>
-                    <div class="col">
-                        <div>
-                            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                placeholder="Phone">
-                        </div>
+                        <label for="subject">Subject</label>
+                        <input type="text" id="Subject" name="Subject" placeholder="Subject">
                     </div>
                 </div>
-                <div class="row row-cols-1">
+                <div class="row">
                     <div class="col">
-                        <div><label for="subject">Subject</label></div>
-                    </div>
-                    <div class="col">
-                        <div><input type="text" id="subject" name="subject" placeholder="Subject"></div>
-                    </div>
-                </div>
-                <div class="row row-cols-1">
-                    <div class="col">
-                        <div><label for="message">Message</label></div>
-                    </div>
-                    <div class="col">
-                        <div><input type="text" id="message" name="message" placeholder="Message"></div>
+                        <label for="message">Message</label>
+                        <!-- Use Bootstrap form-controls class to format input fields, especially textarea -->
+                        <!-- <textarea type="text" id="message" name="message" placeholder="Message"></textarea> -->
+                        <textarea name="Message" id="" cols="30" rows="5" class="form-control" placeholder="Not so much Bootstrapping styling, old school ways going on."
+                            aria-label="Message"></textarea>
                     </div>
                 </div>
-                <div class="row mt-2">
-                    <div class="col">
-                        <div class="text-center">
-                            <button type="button" class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </div>
+                <!-- Button doesn't need it's own row, apparently and make sure type='submit' -->
+                <button type="submit" class="btn btn-primary mt-1">Submit</button>
             </form>
-            <hr>
-            <!-- # CF's solution -->
-            
+
+            <!-- # CF's solution using Bootstrap of course -->
+            <h1 class="text-center text-white mt-3 mb-3">Contact Us</h1>
+            <!-- Wrap the form in a styling element div instead  -->
+            <div id="FORM-STYLING" class="border border-2 border-info shadow-lg p-2 bg-dark alphaTest">
+                <form action="#">
+                    <div class="row">
+                        <div class="col">
+                            <label for="" class="form-label">First Name</label>
+                            <!-- Use input.form-control (faster) -->
+                            <input type="text" name="FirstName" class="form-control" placeholder="First Name"
+                                aria-label="First Name" required>
+                        </div>
+                        <div class="col">
+                            <label for="" class="form-label">Last Name</label>
+                            <input type="text" name="LastName" class="form-control" placeholder="Last Name"
+                                aria-label="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="" class="form-label">Email</label>
+                            <input type="email" name="Email" class="form-control" placeholder="Email" aria-label="Email"
+                                required>
+                        </div>
+                        <div class="col">
+                            <label for="" class="form-label">Phone <em>(optional)</em></label>
+                            <input type="tel" name="Phone" class="form-control" placeholder="Phone"
+                                aria-label="Phone Optional">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="" class="form-label">Subject</label>
+                            <input type="text" name="Subject" class="form-control" placeholder="Subject"
+                                aria-label="Subject" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="" class="form-label">Message</label>
+                            <textarea type="text" name="Message" class="form-control" placeholder="Message"
+                                aria-label="Message" required></textarea>                            
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                </form>
+            </div>
 
         </div>
     </main>
