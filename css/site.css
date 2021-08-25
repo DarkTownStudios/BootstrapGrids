@@ -18,6 +18,8 @@ code,pre {
     color: #F5CA36;
 }
 
+input{ width: 100%; }
+
 body>main {
     /* margin to account for nav bar */
     margin-top: 85px;
@@ -68,3 +70,6 @@ main>.container-fluid,.container-lg{
 .minHeight {
     min-height: 80vh;
 }
+
+
+
