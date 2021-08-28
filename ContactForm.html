@@ -107,6 +107,7 @@
                 <!-- Button doesn't need it's own row, apparently and make sure type='submit' -->
                 <button type="submit" class="btn btn-primary mt-1">Submit</button>
             </form>
+            <!-- End my form -->
 
             <!-- # CF's solution using Bootstrap of course -->
             <h1 class="text-center text-white mt-3 mb-3">Contact Us</h1>
@@ -115,6 +116,7 @@
                 <form action="#">
                     <div class="row">
                         <div class="col">
+                            <!-- Use label.form-label faster -->
                             <label for="" class="form-label">First Name</label>
                             <!-- Use input.form-control (faster) -->
                             <input type="text" name="FirstName" class="form-control" placeholder="First Name"
@@ -122,6 +124,7 @@
                         </div>
                         <div class="col">
                             <label for="" class="form-label">Last Name</label>
+                            <!-- Don't forget to add aria-label -->
                             <input type="text" name="LastName" class="form-control" placeholder="Last Name"
                                 aria-label="Last Name" required>
                         </div>
