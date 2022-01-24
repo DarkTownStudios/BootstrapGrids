@@ -37,11 +37,12 @@ main>.container-fluid,.container-lg{
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100 % ;
+    width: 100% ;
 }
 
 .icon-branding{ 
     padding-right: 1em;
+    max-height: 64px;
 }
 
 .bg-main{ 
